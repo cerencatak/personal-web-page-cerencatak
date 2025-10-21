@@ -1,4 +1,4 @@
- https://cerencatak.github.io/personal-web-page-cerencatak/
+ Visit my web site : https://cerencatak.github.io/personal-web-page-cerencatak/
 
  #  Personal Web Page 
 
@@ -14,7 +14,7 @@ It was built using **HTML**, **CSS**, and **JavaScript**, and includes an intera
 - **Extras:**
   - Smooth scroll-reveal animations  
   - “Sparkle rain” effect at page load  
-  - Fully responsive design  
+  
 
 ---
 
@@ -32,10 +32,10 @@ It was built using **HTML**, **CSS**, and **JavaScript**, and includes an intera
 
 ##  Project Structure
 project/
-├── index.html # main page (includes the map)
-├── background.html # additional “About Me” page
-├── styles.css # page design, animations, and responsive styling
-├── scripts.js # JS (reveal animation, map logic, sparkle effect)
+├── index.html 
+├── background.html 
+├── styles.css 
+├── scripts.js 
 └── images/
 ├── ceren.jpg
 └── background_pic.jpeg
