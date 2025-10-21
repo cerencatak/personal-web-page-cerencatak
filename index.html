@@ -3,66 +3,72 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ceren Çatak | Kişisel Web Sayfası</title>
-  <link rel="stylesheet" href="styles.css?v=2">
+  <title> Ceren Çatak</title>
 
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles.css?v=12">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap" rel="stylesheet">
+
+  <!-- OpenLayers CSS -->
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+    crossorigin=""
+  />
 </head>
 
-<body>
-  <!-- ÜST KISIM -->
-  <header>
-        <!-- 📸 Profil Fotoğrafı -->
-    <img src="images/ceren.jpg" 
-         alt="Ceren Çatak" 
-         class="profile-photo"
-         width="180" 
-         height="180" 
-         style="border-radius: 50%; margin-top: 10px;">
+<body class="loaded">
+  <div id="sparkle-container"></div>
+  <header class="hero" id="top">
+    <div class="hero__bg"></div>
+    <div class="hero__content">
+      <img src="images/ceren.jpg" alt="Ceren Çatak" class="avatar">
+      <h1 class="title"><span>CEREN ÇATAK</span></h1>
+      <p class="subtitle">Geomatics Engineering</p>
 
-    <h1> Ceren Çatak</h1>
-    <p>Hello, I'm Ceren ÇATAK. I'm a Geomatics Engineering student at Hacettepe University. 
-      This website was created as part of the GMT 458 - Web GIS course.</p>
-
-
-    <!-- 🔗 Menü -->
-    <nav>
-      <hr>
-      <a href="index.html">Home</a> |
-      <a href="background.html">About Me </a> |
-      <a href="projects.html">Projects </a>
-      <hr>
-    </nav>
+      <nav class="pills">
+        <a href="#about">About</a>
+        <a href="#interests">Interests</a>
+        <a href="#education">Education</a>
+        <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
+        <a href="#languages">Languages</a>
+        <a href="#contact" class="pill-cta">Contact</a>
+      </nav>
+    </div>
   </header>
 
-  <!-- ANA İÇERİK -->
   <main>
-    <section>
-      <h2> About Me </h2>
-      <p>I was born on June 13, 2003, in Tekirdag, Türkiye. Between 2018 and 2021, I studied at Tekirdağ Anatolian Highschool.
-         I am currently pursuing my undergraduate degree in Geomatics Engineering at Hacettepe University. I completed my internship at the General Directorate of Turkish Coal Enterprises
-         and BMD Surveying Engineering Consultancy companies.
-         My academic interests include Geographic Information Systems (GIS), remote sensing and image processing, satellite orbits and astronomy, as well as sustainable energy. 
-         After completing my  master's degree, I plan to work in the UK, further developing my knowledge and skills on a global scale. 
-         Outside of my academic pursuits, I enjoy playing tennis and swimming, playing the piano , and reading books on psychology and history.</p>
+    <section id="about" class="reveal" style="--d:.0s">
+      <h2>About Me</h2>
+      <p>I was born on June 13, 2003, in Tekirdağ, Türkiye. Between 2018 and 2021, I studied at
+        Tekirdağ Anatolian High School. I am currently pursuing my undergraduate degree in Geomatics
+        Engineering at Hacettepe University. I completed my internship at the General Directorate of
+        Turkish Coal Enterprises and BMD Surveying Engineering Consultancy companies. My academic
+        interests include GIS, remote sensing & image processing, satellite orbits & astronomy, and
+        sustainable energy. After my master’s, I plan to work in the UK. Outside academics: tennis,
+        swimming, piano, psychology & history books.
+      </p>
     </section>
 
-    <section>
-      <h2> My Interests </h2>
+    <section id="interests" class="reveal" style="--d:.08s">
+      <h2>My Interests</h2>
       <ul>
         <li>Geographical Information Systems (GIS)</li>
         <li>Remote Sensing and Image Processing</li>
         <li>Web Development (HTML, CSS, JavaScript)</li>
-        <li>Data  Analysis with Python</li>
-        <li>Psychology </li>
+        <li>Data Analysis with Python</li>
+        <li>Psychology</li>
       </ul>
     </section>
 
-    <section>
-      <h2> Education </h2>
+    <section id="education" class="reveal" style="--d:.16s">
+      <h2>Education</h2>
       <table border="1" cellpadding="8">
         <tr>
           <th>College</th>
-          <th>Department </th>
+          <th>Department</th>
           <th>Year</th>
         </tr>
         <tr>
@@ -70,26 +76,83 @@
           <td>Geomatics Engineering</td>
           <td>2021 - Ongoing</td>
         </tr>
-        <tr>
-          <td> Tekirdag Anatolian Highschool</td>
-          <td> Numerical Sciences   </td>
-          <td>2018-2021 </td>
-        </tr>
       </table>
     </section>
 
-    <section>
-      <h2> Contact </h2>
-      <p> E-mail : <a href="mailto:cerencatak@hacettepe.edu.tr">ceren.catak@hacettepe.edu.tr</a></p>
-      <p> GitHub: <a href="https://github.com/cerencatak" target="_blank">github.com/cerencatak</a></p>
-      <p> LinkedIn : <a href="http://www.linkedin.com/in/ceren-%C3%A7atak" target="_blank">linkedin.com/ceren-çatak</a></p>
+    <section id="experience" class="reveal" style="--d:.18s">
+      <h2>Experience & Internships</h2>
+      <div class="experience-container">
+        <article class="experience-card">
+          <h3>Turkish Coal Enterprises (TKİ) — Internship</h3>
+          <p><em>Focus:</em> enterprise workflows, data handling, and reporting basics.</p>
+          <ul>
+            <li>Observed data organization & documentation standards.</li>
+            <li>Gained awareness of enterprise-scale geospatial needs.</li>
+          </ul>
+        </article>
+        <article class="experience-card">
+          <h3>BMD Surveying Engineering Consultancy — Internship</h3>
+          <p><em>Focus:</em> surveying & photogrammetry environment, quality control mindset.</p>
+          <ul>
+            <li>Observed stereo mapping & editing routines at a professional office.</li>
+            <li>Learned about PPK concepts and deliverable preparation.</li>
+          </ul>
+        </article>
+      </div>
     </section>
-  </main>
 
-  <!-- ALT KISIM -->
-  <footer>
-    <hr>
-    <p>© 2025 Ceren Çatak | All rights reserved.</p>
-  </footer>
+    <section id="skills" class="reveal" style="--d:.1s">
+      <h2>Skills</h2>
+      <ul>
+        <li>GIS & Mapping: QGIS (basics), vector/raster workflows</li>
+        <li>Remote Sensing: Sentinel-2 preprocessing, water-body detection logic</li>
+        <li>Programming: Python (data analysis), HTML/CSS, basic JavaScript</li>
+        <li>GNSS: RINEX reading basics, SP3 awareness, coordinate concepts</li>
+        <li>Soft Skills: teamwork, documentation, presentation</li>
+      </ul>
+    </section>
+
+    <section id="certs" class="reveal" style="--d:.26s">
+      <h2>Certificates & Courses (Selected)</h2>
+      <ul>
+        <li>DRIVER’S LICENSE - B CLASS, 2024</li>
+        <li>SHGM, IHA-1 Pilot License, 2024</li>
+        <li>SKYVIEW, Mapping With UAV, 2024</li>
+        <li>SKYVIEW, Agricultural Spraying With UAV, 2024</li>
+        <li>SKYVIEW, Radio Communication Certification, 2024</li>
+        <li>HKMO, Transportation Projects Training, 2025</li>
+      </ul>
+    </section>
+
+    <section id="languages" class="reveal" style="--d:.34s">
+      <h2>Languages</h2>
+      <ul>
+        <li>Turkish — Native</li>
+        <li>English — B2 (Upper-Intermediate)</li>
+        <li>German — Beginner</li>
+      </ul>
+    </section>
+
+    <section id="contact" class="reveal" style="--d:.24s">
+      <h2>Contact</h2>
+      <p>E-mail: <a href="mailto:ceren.catak@hacettepe.edu.tr">ceren.catak@hacettepe.edu.tr</a></p>
+      <p>GitHub: <a href="https://github.com/cerencatak" target="_blank">github.com/cerencatak</a></p>
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/ceren-%C3%A7atak" target="_blank">linkedin.com/in/ceren-çatak</a></p>
+    </section>
+
+    <!-- MAP -->
+  
+    <section id="campus-map" class="reveal" style="--d:.42s">
+      <h2>You can find me here! </h2>
+      <div id="mapCanvas" class="frame-wrap"></div>
+    </section>
+
+    <script
+    src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+    crossorigin=""
+    ></script>
+  <script src="script.js"></script>
+</body>
 </body>
 </html>
