@@ -1,5 +1,5 @@
-Repository: https://github.com/cerencatak/personal-web-page-cerencatak.git
-Visit my web site : https://cerencatak.github.io/personal-web-page-cerencatak/
+#  Repository: https://github.com/cerencatak/personal-web-page-cerencatak.git
+#  Visit my web site : https://cerencatak.github.io/personal-web-page-cerencatak/
 
  #  Personal Web Page 
 
